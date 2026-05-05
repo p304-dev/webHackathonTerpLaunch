@@ -1,22 +1,22 @@
 .card {
   background: var(--card-bg);
-  border-radius: 10px;
-  padding: 16px;
+  border-radius: 14px;
+  padding: 28px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .card-title {
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 600;
 }
 
 .card-description {
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: #555;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .card-tags {
@@ -28,9 +28,9 @@
 .card-tag {
   background: var(--umd-gold);
   color: #1a1a1a;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  padding: 2px 8px;
+  padding: 4px 12px;
   border-radius: 12px;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .card-author {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #888;
 }
 
@@ -51,8 +51,8 @@
   color: #fff;
   border: none;
   border-radius: 6px;
-  padding: 6px 12px;
+  padding: 10px 20px;
   cursor: pointer;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }

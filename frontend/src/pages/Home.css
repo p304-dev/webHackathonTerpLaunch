@@ -4,7 +4,8 @@
   align-items: center;
   padding: 16px 40px;
   border-bottom: 2px solid var(--umd-gold);
-  background: var(--card-bg);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(8px);
 }
 
 .navbar-logo {
@@ -21,7 +22,7 @@
 }
 
 .navbar-link {
-  color: var(--text);
+  color: #fff;
   text-decoration: none;
   font-weight: 500;
 }
@@ -36,22 +37,33 @@
 }
 
 .hero {
-  background: var(--umd-red);
+  background: transparent;
   color: #fff;
   text-align: center;
   padding: 80px 20px 60px;
+  margin-bottom: 100 px;
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 9rem;
   font-weight: 800;
   line-height: 1.2;
   margin-bottom: 16px;
+  background: linear-gradient(270deg, #FFD200, #ff6b6b, #ffffff, #a78bfa, #FFD200);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 50px;
+  animation: textGradientCycle 6s ease-in-out infinite;
 }
 
-.hero-highlight {
-  color: var(--umd-gold);
+@keyframes textGradientCycle {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
+
 
 .hero-subtitle {
   font-size: 1.1rem;
@@ -68,28 +80,39 @@
 }
 
 .btn-primary {
-  background: var(--umd-gold);
-  color: #1a1a1a;
-  padding: 12px 28px;
-  border-radius: 8px;
+  background: transparent;
+  color: #ffff;
+  padding: 18px 48px;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  border: 2px solid #fff;
+}
+
+.btn-primary:hover {
+  background: #E03A3E;
+  transition: background 0.3s ease;
 }
 
 .btn-secondary {
   background: transparent;
   color: #fff;
-  padding: 12px 28px;
-  border-radius: 8px;
+  padding: 18px 48px;
+  border-radius: 20px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.25rem;
   border: 2px solid #fff;
 }
 
+.btn-secondary:hover {
+  background: #E03A3E;
+  transition: background 0.3s ease;
+}
+
 .content-container {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 40px;
 }
