@@ -1,0 +1,23 @@
+.trending-section {
+  padding: 32px 0;
+}
+
+.trending-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--umd-red);
+}
+
+.trending-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.trending-item {
+  min-width: 260px;
+  max-width: 280px;
+  flex-shrink: 0;
+}

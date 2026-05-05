@@ -1,0 +1,95 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  border-bottom: 2px solid var(--umd-gold);
+  background: var(--card-bg);
+}
+
+.navbar-logo {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--umd-red);
+  text-decoration: none;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.navbar-link {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-cta {
+  background: var(--umd-red);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero {
+  background: var(--umd-red);
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px 60px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-highlight {
+  color: var(--umd-gold);
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  max-width: 520px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: var(--umd-gold);
+  color: #1a1a1a;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid #fff;
+}
+
+.content-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 40px;
+}

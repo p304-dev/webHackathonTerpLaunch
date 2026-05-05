@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { upvoteApp } from '../services/api'
+import './AppCard.css'
 
 export default function AppCard({ app }) {
   const [upvotes, setUpvotes] = useState(app.upvotes)
@@ -14,41 +15,17 @@ export default function AppCard({ app }) {
   }
 
   return (
-    <div style={{
-      background: 'var(--card-bg)',
-      borderRadius: '10px',
-      padding: '16px',
-      boxShadow: '0 2px 8px rgba(0,0,0,0.08)',
-      display: 'flex',
-      flexDirection: 'column',
-      gap: '8px',
-    }}>
-      <h3 style={{ fontSize: '1rem', fontWeight: 600 }}>{app.name}</h3>
-      <p style={{ fontSize: '0.85rem', color: '#555', lineHeight: 1.4 }}>{app.description}</p>
-      <div style={{ display: 'flex', gap: '6px', flexWrap: 'wrap' }}>
+    <div className="card">
+      <h3 className="card-title">{app.name}</h3>
+      <p className="card-description">{app.description}</p>
+      <div className="card-tags">
         {app.category_tags.map(tag => (
-          <span key={tag} style={{
-            background: 'var(--umd-gold)',
-            color: '#1a1a1a',
-            fontSize: '0.7rem',
-            fontWeight: 600,
-            padding: '2px 8px',
-            borderRadius: '12px',
-          }}>{tag}</span>
+          <span key={tag} className="card-tag">{tag}</span>
         ))}
       </div>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '4px' }}>
-        <span style={{ fontSize: '0.8rem', color: '#888' }}>by {app.submitter_name}</span>
-        <button onClick={handleUpvote} style={{
-          background: 'var(--umd-red)',
-          color: '#fff',
-          border: 'none',
-          borderRadius: '6px',
-          padding: '6px 12px',
-          cursor: 'pointer',
-          fontWeight: 600,
-          fontSize: '0.85rem',
-        }}>
+      <div className="card-footer">
+        <span className="card-author">by {app.submitter_name}</span>
+        <button className="card-upvote" onClick={handleUpvote}>
           ▲ {upvotes}
         </button>
       </div>
