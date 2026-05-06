@@ -1,0 +1,12 @@
+backend/.env
+.env
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+node_modules/
+dist/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

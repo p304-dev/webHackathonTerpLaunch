@@ -1,21 +1,14 @@
 # ============================================================
 # seed.py — Load Demo Data Into the Database
-# Owner: Aryan (Database)
 #
-# WHAT THIS DOES:
 #   1. Clears all existing data (safe reset)
 #   2. Inserts 10 realistic UMD student apps
 #   3. Inserts 8 feedback comments on some of those apps
-#   4. Prints a summary so you can verify it worked
 #
 # HOW TO RUN:
 #   cd backend
 #   python seed.py
-#
-# SAFE TO RUN MULTIPLE TIMES:
-#   It clears the database first, so you always get a clean slate.
-#   Run it whenever you want to reset back to demo state.
-# ============================================================
+
 
 from datetime import datetime, timedelta
 from db import apps_collection, feedback_collection, test_connection
