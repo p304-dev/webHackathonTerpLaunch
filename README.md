@@ -188,9 +188,9 @@ UMD-specific problem tags used for filtering:
 
 | Person | Role | Owns |
 |--------|------|------|
-| Person 1 | Frontend Lead | Home page, TrendingSection, AppCard, routing, UMD theme/styling |
-| Person 2 | Frontend | Browse/search page, FilterSidebar, App detail, SubmitForm, Leaderboard page |
-| Person 3 | Backend | FastAPI setup, all API endpoints, upvote logic, CORS config, frontend wiring |
-| Person 4 | Database | MongoDB Atlas setup, schema design, seed data, indexes, db.py connection module |
+| Pranav | Frontend Lead | Home page, TrendingSection, AppCard, routing, UMD theme/styling |
+| Saharsh| Frontend | Browse/search page, FilterSidebar, App detail, SubmitForm, Leaderboard page |
+| David Ahn | Backend | FastAPI setup, all API endpoints, upvote logic, CORS config, frontend wiring |
+| Aryan Sharma | Database | MongoDB Atlas setup, schema design, seed data, indexes, db.py connection module |
 
-Built at UMD Hackathon 2025. Fear the Turtle 🐢
+Fear the Turtle 🐢
