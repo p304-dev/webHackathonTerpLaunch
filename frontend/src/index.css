@@ -15,8 +15,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #111111;
-  animation: gradientCycle 8s ease-in-out infinite;
+  background: #221e1e;
   min-height: 100vh;
   color: var(--text);
 }
