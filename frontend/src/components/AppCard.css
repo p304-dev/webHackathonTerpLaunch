@@ -56,3 +56,8 @@
   font-weight: 600;
   font-size: 1rem;
 }
+
+.card-upvote:hover {
+  background: #c12e2e;
+  transition: background 0.3s ease;
+}
