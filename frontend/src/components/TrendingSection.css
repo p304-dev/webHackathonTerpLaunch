@@ -3,22 +3,21 @@
 }
 
 .trending-title {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 16px;
   color: var(--umd-red);
+  text-align: center;
 }
 
 .trending-scroll {
   display: flex;
-  margin-top: 50px;
-  gap: 70px;
+  flex-wrap: wrap;
   justify-content: center;
-  overflow-x: auto;
-  padding-bottom: 8px;
+  margin-top: 50px;
+  gap: 32px;
 }
 
 .trending-item {
   width: 340px;
-  flex-shrink: 0;
 }

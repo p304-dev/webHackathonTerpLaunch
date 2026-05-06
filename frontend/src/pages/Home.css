@@ -80,7 +80,7 @@
 }
 
 .btn-primary {
-  background: transparent;
+  background: #c29f02;
   color: #ffff;
   padding: 18px 48px;
   border-radius: 20px;
@@ -96,7 +96,7 @@
 }
 
 .btn-secondary {
-  background: transparent;
+  background: #c29f02;
   color: #fff;
   padding: 18px 48px;
   border-radius: 20px;

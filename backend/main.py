@@ -58,8 +58,7 @@ def root():
 from routes.apps import router as apps_router
 app.include_router(apps_router)
 
-# Backend person: uncomment these as you build each route file:
-# from routes.feedback import router as feedback_router
-# from routes.leaderboard import router as leaderboard_router
-# app.include_router(feedback_router)
-# app.include_router(leaderboard_router)
+from routes.feedback import router as feedback_router
+from routes.leaderboard import router as leaderboard_router
+app.include_router(feedback_router)
+app.include_router(leaderboard_router)

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { getTrending } from '../services/api'
-import { mockApps } from '../mock/apps'
 import AppCard from './AppCard'
 import './TrendingSection.css'
 
@@ -8,9 +7,7 @@ export default function TrendingSection() {
   const [apps, setApps] = useState([])
 
   useEffect(() => {
-    getTrending()
-      .then(setApps)
-      .catch(() => setApps(mockApps))
+    getTrending().then(setApps)
   }, [])
 
   return (
