@@ -1,19 +1,12 @@
 # ============================================================
 # schemas.py — Data Shapes (Pydantic Models)
-# Owner: Aryan (Database)
+# Database
 #
-# WHAT THIS FILE DOES:
 #   Defines the exact structure of data going INTO and OUT OF the API.
 #   FastAPI uses these to:
 #     - Validate incoming requests (reject bad data automatically)
 #     - Generate the /docs page with correct field descriptions
 #     - Serialize responses to JSON
-#
-# EXAMPLE:
-#   When someone POSTs to /apps, FastAPI checks their JSON body
-#   against AppSubmit. If "name" is missing, FastAPI auto-returns
-#   a 422 error — Pranav doesn't have to write any validation code.
-# ============================================================
 
 from pydantic import BaseModel, Field
 from typing import List, Optional

@@ -1,17 +1,14 @@
 # ============================================================
 # main.py — FastAPI Entry Point
-# Owner: Pranav (Backend), but Aryan set up the initial wiring
 #
+#backend
 # HOW TO RUN:
 #   cd backend
 #   uvicorn main:app --reload
 #   → Server starts at http://localhost:8000
 #   → API docs at http://localhost:8000/docs
 #
-# WHAT --reload DOES:
-#   Auto-restarts the server when you save a file.
-#   Use this during development. Don't use it in production.
-# ============================================================
+
 
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
@@ -61,7 +58,7 @@ def root():
 from routes.apps import router as apps_router
 app.include_router(apps_router)
 
-# Pranav: uncomment these as you build each route file:
+# Backend person: uncomment these as you build each route file:
 # from routes.feedback import router as feedback_router
 # from routes.leaderboard import router as leaderboard_router
 # app.include_router(feedback_router)

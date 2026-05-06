@@ -1,18 +1,12 @@
 # ============================================================
 # db.py — MongoDB Connection Module
-# Owner: Aryan (Database)
+# Database
 # 
-# HOW IT WORKS:
 #   1. Reads MONGO_URI from the .env file
 #   2. Connects to MongoDB Atlas
 #   3. Exports "db", "apps_collection", and "feedback_collection"
 #      so other files can do: from db import apps_collection
 #
-# HOW TO TEST:
-#   cd backend
-#   python db.py
-#   → Should print "✅ Connected to MongoDB Atlas successfully!"
-# ============================================================
 
 import os
 from dotenv import load_dotenv
@@ -27,7 +21,7 @@ MONGO_URI = os.getenv("MONGO_URI")
 # If .env is missing or empty, crash immediately with a helpful message
 if not MONGO_URI:
     raise ValueError(
-        "\n❌ MONGO_URI not found!\n"
+        "\n MONGO_URI not found!\n"
         "Make sure you have a file called .env in the backend/ folder\n"
         "with this line (using your real password):\n"
         "MONGO_URI=mongodb+srv://terpLaunchAdmin:YOUR_PASSWORD@cluster0.xxxxx.mongodb.net/terpLaunch?retryWrites=true&w=majority\n"
@@ -55,12 +49,12 @@ def test_connection():
     """
     try:
         client.admin.command("ping")
-        print("✅ Connected to MongoDB Atlas successfully!")
+        print("Connected to MongoDB Atlas successfully!")
         print(f"   Database: {db.name}")
         print(f"   Collections: {db.list_collection_names()}")
         return True
     except Exception as e:
-        print(f"❌ Failed to connect to MongoDB: {e}")
+        print(f" Failed to connect to MongoDB: {e}")
         print("\nCommon fixes:")
         print("  1. Check your password in .env — no < > brackets around it")
         print("  2. Check Network Access in Atlas — 0.0.0.0/0 should be whitelisted")
