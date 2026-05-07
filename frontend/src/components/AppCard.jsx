@@ -7,7 +7,7 @@ export default function AppCard({ app }) {
 
   const handleUpvote = async () => {
     try {
-      const updated = await upvoteApp(app._id)
+      const updated = await upvoteApp(app.id)
       setUpvotes(updated.upvotes)
     } catch {
       setUpvotes(prev => prev + 1)

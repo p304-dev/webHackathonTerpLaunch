@@ -15,7 +15,7 @@ export default function TrendingSection() {
       <h2 className="trending-title">Trending This Month</h2>
       <div className="trending-scroll">
         {apps.map(app => (
-          <div key={app._id} className="trending-item">
+          <div key={app.id} className="trending-item">
             <AppCard app={app} />
           </div>
         ))}

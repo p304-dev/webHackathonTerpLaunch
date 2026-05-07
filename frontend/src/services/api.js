@@ -1,7 +1,7 @@
 const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:8000"
 
 export const getTrending = async () => {
-  const res = await fetch(`${BASE_URL}/apps/discover/trending`)
+  const res = await fetch(`${BASE_URL}/trending`)
   return res.json()
 }
 
