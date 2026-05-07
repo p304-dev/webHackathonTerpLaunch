@@ -34,6 +34,9 @@ export default function Browse() {
     <div style={{ display: 'flex', minHeight: '100vh', background: '#f9f9f9' }}>
       <FilterSidebar selected={category} onSelect={setCategory} />
       <main style={{ flex: 1, padding: '40px' }}>
+        <div style={{ marginBottom: '8px' }}>
+          <Link to="/" style={{ color: '#e03030', textDecoration: 'none' }}>← Home</Link>
+        </div>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '24px' }}>
           <h1 style={{ margin: 0, color: '#e03030' }}>🐢 Browse Apps</h1>
           <Link to="/submit" style={{ background: '#e03030', color: 'white', padding: '10px 20px', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold' }}>
@@ -61,9 +64,7 @@ export default function Browse() {
         ) : (
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: '20px' }}>
             {apps.map(app => (
-              <Link key={app.id} to={`/apps/${app.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                <AppCard app={app} />
-              </Link>
+              <AppCard key={app.id} app={app} />
             ))}
           </div>
         )}

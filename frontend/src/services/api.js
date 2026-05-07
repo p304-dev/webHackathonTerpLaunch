@@ -6,7 +6,10 @@ export const getTrending = async () => {
 }
 
 export const getAllApps = async (category = "", search = "") => {
-  const res = await fetch(`${BASE_URL}/apps?category=${category}&search=${search}`)
+  const params = new URLSearchParams()
+  if (category) params.append('category', category)
+  if (search) params.append('search', search)
+  const res = await fetch(`${BASE_URL}/apps?${params}`)
   return res.json()
 }
 

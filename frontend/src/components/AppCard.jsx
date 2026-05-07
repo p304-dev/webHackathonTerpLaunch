@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { upvoteApp } from '../services/api'
 import './AppCard.css'
 
@@ -16,7 +17,9 @@ export default function AppCard({ app }) {
 
   return (
     <div className="card">
-      <h3 className="card-title">{app.name}</h3>
+      <Link to={`/apps/${app.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+        <h3 className="card-title">{app.name}</h3>
+      </Link>
       <p className="card-description">{app.description}</p>
       <div className="card-tags">
         {app.category_tags.map(tag => (

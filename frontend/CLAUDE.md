@@ -283,4 +283,6 @@ npm run dev  # http://localhost:5173
   - Mention seeded with real UMD projects from past 2 semesters
   - Roadmap: Auth, email notifications, featured listings
 
+  -python -m uvicorn main:app --reload
+
 ---

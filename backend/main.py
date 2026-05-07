@@ -238,10 +238,12 @@ async def get_trending():
         if created_at and created_at.year == now.year and created_at.month == now.month:
             this_month.append(app)
  
-    if len(this_month) > 0:
+    if len(this_month) >= 5:
         pool = this_month
     else:
-        pool = all_apps
+        seen_ids = {app["_id"] for app in this_month}
+        extras = [app for app in all_apps if app["_id"] not in seen_ids]
+        pool = this_month + extras
  
     for i in range(len(pool)):
         for j in range(i + 1, len(pool)):

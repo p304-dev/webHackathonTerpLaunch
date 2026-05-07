@@ -79,8 +79,8 @@ export default function AppDetail() {
     <div style={{ maxWidth: '700px', margin: '0 auto', padding: '40px 20px' }}>
       <Link to="/browse" style={{ color: '#e03030', textDecoration: 'none' }}>← Back to Browse</Link>
 
-      <h1 style={{ marginTop: '16px', color: '#e03030' }}>{app.name}</h1>
-      <p style={{ fontSize: '16px', color: '#444' }}>{app.description}</p>
+      <h1 style={{ marginTop: '16px', color: '#e03030', marginBottom: '16px' }}>{app.name}</h1>
+      <p style={{ fontSize: '16px', color: '#444', marginBottom: '16px' }}>{app.description}</p>
 
       <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
         {app.category_tags.map(tag => (
@@ -88,7 +88,7 @@ export default function AppDetail() {
         ))}
       </div>
 
-      <p style={{ color: '#666' }}>by <strong>{app.submitter_name}</strong></p>
+      <p style={{ color: '#ffffff', marginBottom: '16px' }}>by <strong>{app.submitter_name}</strong></p>
 
       <div style={{ display: 'flex', gap: '12px', marginBottom: '32px' }}>
         <a href={app.url} target="_blank" rel="noreferrer" style={{ background: '#e03030', color: 'white', padding: '10px 20px', borderRadius: '8px', textDecoration: 'none', fontWeight: 'bold' }}>
@@ -109,8 +109,8 @@ export default function AppDetail() {
       <form onSubmit={handleFeedback} style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '32px' }}>
         <input required placeholder="Your name" value={reviewerName} onChange={e => setReviewerName(e.target.value)} style={{ padding: '10px', borderRadius: '8px', border: '1px solid #ddd' }} />
         <textarea required placeholder="Your comment" value={comment} onChange={e => setComment(e.target.value)} rows={3} style={{ padding: '10px', borderRadius: '8px', border: '1px solid #ddd', resize: 'vertical' }} />
-        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-          <label>Rating:</label>
+        <div>
+          <label style={{ display: 'block', marginBottom: '4px' }}>Rating:</label>
           <select value={rating} onChange={e => setRating(e.target.value)} style={{ padding: '8px', borderRadius: '6px', border: '1px solid #ddd' }}>
             {[5,4,3,2,1].map(n => <option key={n} value={n}>{n} ⭐</option>)}
           </select>

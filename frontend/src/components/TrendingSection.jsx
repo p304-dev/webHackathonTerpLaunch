@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { getTrending } from '../services/api'
 import AppCard from './AppCard'
 import './TrendingSection.css'
