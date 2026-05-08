@@ -57,8 +57,8 @@ export default function Submit() {
         </div>
 
         <div>
-          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px', color: '#986262' }}>App URL *</label>
-          <input required name="url" value={form.url} onChange={handleChange} placeholder="https://github.com/you/yourapp" style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #ddd', boxSizing: 'border-box' }} />
+          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px', color: '#986262' }}>App URL <span style={{ fontWeight: 'normal', color: '#999' }}>(optional)</span></label>
+          <input name="url" value={form.url} onChange={handleChange} placeholder="https://myapp.com" style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #ddd', boxSizing: 'border-box' }} />
         </div>
 
         <div>
