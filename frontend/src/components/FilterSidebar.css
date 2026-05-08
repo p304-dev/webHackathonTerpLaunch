@@ -1,0 +1,20 @@
+.filter-heading {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #e03030;
+}
+
+.filter-btn {
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 6px 12px;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.filter-btn:hover {
+  background: #e03030 !important;
+  color: white !important;
+}

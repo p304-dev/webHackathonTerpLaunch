@@ -80,7 +80,7 @@ export default function AppDetail() {
       <Link to="/browse" style={{ color: '#e03030', textDecoration: 'none' }}>← Back to Browse</Link>
 
       <h1 style={{ marginTop: '16px', color: '#e03030', marginBottom: '16px' }}>{app.name}</h1>
-      <p style={{ fontSize: '16px', color: '#444', marginBottom: '16px' }}>{app.description}</p>
+      <p style={{ fontSize: '16px', color: '#986262', marginBottom: '16px', fontWeight: 'bold' }}>{app.description}</p>
 
       <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
         {app.category_tags.map(tag => (
@@ -103,14 +103,14 @@ export default function AppDetail() {
       </div>
       {collabMsg && <p style={{ color: 'green' }}>{collabMsg}</p>}
 
-      <hr style={{ margin: '32px 0', borderColor: '#eee' }} />
+      <hr style={{ marginBottom: '16px', borderColor: '#eee' }} />
 
-      <h2>Leave Feedback</h2>
+      <h2 style={{ margin: '16px 0', color: '#986262' }}>Leave Feedback</h2>
       <form onSubmit={handleFeedback} style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '32px' }}>
         <input required placeholder="Your name" value={reviewerName} onChange={e => setReviewerName(e.target.value)} style={{ padding: '10px', borderRadius: '8px', border: '1px solid #ddd' }} />
         <textarea required placeholder="Your comment" value={comment} onChange={e => setComment(e.target.value)} rows={3} style={{ padding: '10px', borderRadius: '8px', border: '1px solid #ddd', resize: 'vertical' }} />
         <div>
-          <label style={{ display: 'block', marginBottom: '4px' }}>Rating:</label>
+          <label style={{ display: 'block', marginBottom: '4px', color: '#986262', fontWeight: 'bold' }}>Rating:</label>
           <select value={rating} onChange={e => setRating(e.target.value)} style={{ padding: '8px', borderRadius: '6px', border: '1px solid #ddd' }}>
             {[5,4,3,2,1].map(n => <option key={n} value={n}>{n} ⭐</option>)}
           </select>
@@ -121,7 +121,7 @@ export default function AppDetail() {
         {feedbackMsg && <p style={{ color: 'green' }}>{feedbackMsg}</p>}
       </form>
 
-      <h2>Reviews ({feedback.length})</h2>
+      <h2 style={{ margin: '16px 0', color: '#986262' }}>Reviews ({feedback.length})</h2>
       {feedback.length === 0 ? <p style={{ color: '#888' }}>No reviews yet. Be the first!</p> : (
         feedback.map(fb => (
           <div key={fb.id} style={{ background: 'white', border: '1px solid #eee', borderRadius: '10px', padding: '16px', marginBottom: '12px' }}>

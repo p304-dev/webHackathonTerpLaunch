@@ -47,32 +47,32 @@ export default function Submit() {
 
       <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
         <div>
-          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px' }}>App Name *</label>
+          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px', color: '#986262', marginTop: '16px' }}>App Name *</label>
           <input required name="name" value={form.name} onChange={handleChange} placeholder="My Cool App" style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #ddd', boxSizing: 'border-box' }} />
         </div>
 
         <div>
-          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px' }}>Description * <span style={{ color: '#999', fontWeight: 'normal' }}>({form.description.length}/280)</span></label>
+          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px', color: '#986262'  }}>Description * <span style={{ color: '#999', fontWeight: 'normal', color: '#986262'  }}>({form.description.length}/280)</span></label>
           <textarea required name="description" value={form.description} onChange={handleChange} placeholder="What does your app do?" rows={4} maxLength={280} style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #ddd', resize: 'vertical', boxSizing: 'border-box' }} />
         </div>
 
         <div>
-          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px' }}>App URL *</label>
+          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px', color: '#986262' }}>App URL *</label>
           <input required name="url" value={form.url} onChange={handleChange} placeholder="https://github.com/you/yourapp" style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #ddd', boxSizing: 'border-box' }} />
         </div>
 
         <div>
-          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px' }}>Your Name *</label>
+          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px', color: '#986262'  }}>Your Name *</label>
           <input required name="submitter_name" value={form.submitter_name} onChange={handleChange} placeholder="Jane Smith" style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #ddd', boxSizing: 'border-box' }} />
         </div>
 
         <div>
-          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px' }}>Your Email *</label>
+          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '6px', color: '#986262'  }}>Your Email *</label>
           <input required type="email" name="submitter_email" value={form.submitter_email} onChange={handleChange} placeholder="jane@umd.edu" style={{ width: '100%', padding: '10px', borderRadius: '8px', border: '1px solid #ddd', boxSizing: 'border-box' }} />
         </div>
 
         <div>
-          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '10px' }}>Categories * (select all that apply)</label>
+          <label style={{ fontWeight: 'bold', display: 'block', marginBottom: '10px' , color: '#986262'  }}>Categories * (select all that apply)</label>
           <div style={{ display: 'flex', flexWrap: 'wrap', gap: '8px' }}>
             {CATEGORIES.map(cat => (
               <button type="button" key={cat} onClick={() => toggleTag(cat)}
@@ -85,7 +85,7 @@ export default function Submit() {
 
         {error && <p style={{ color: 'red', margin: 0 }}>{error}</p>}
 
-        <button type="submit" disabled={loading} style={{ background: '#e03030', color: 'white', border: 'none', padding: '14px', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold', fontSize: '16px' }}>
+        <button type="submit" disabled={loading} style={{ background: '#e03030', color: 'white', border: 'none', padding: '14px', borderRadius: '8px', cursor: 'pointer', fontWeight: 'bold', fontSize: '16px', marginTop: '8px' }}>
           {loading ? 'Submitting...' : 'Submit App 🐢'}
         </button>
       </form>

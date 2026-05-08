@@ -16,7 +16,7 @@ export default function Leaderboard() {
     <div style={{ maxWidth: '700px', margin: '0 auto', padding: '40px 20px' }}>
       <Link to="/" style={{ color: '#e03030', textDecoration: 'none' }}>← Home</Link>
       <h1 style={{ color: '#e03030', marginTop: '16px' }}>🏆 Developer Leaderboard</h1>
-      <p style={{ color: '#666' }}>Top UMD developers ranked by total upvotes across all their apps.</p>
+      <p style={{ color: '#986262', fontWeight: 'bold', marginTop: '16px' }}>Top UMD developers ranked by total upvotes across all their apps.</p>
 
       {loading ? <p>Loading...</p> : leaders.length === 0 ? <p>No developers yet. <Link to="/submit">Submit an app!</Link></p> : (
         <div style={{ marginTop: '24px' }}>
